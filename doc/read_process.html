@@ -1,0 +1,492 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Standard Flow of Read Request · Palisade Doc</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="deployment_ideas.html" />
+    
+    
+    <link rel="prev" href="map_reduce_architecture.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="developer_guide.html">
+            
+                <a href="developer_guide.html">
+            
+                    
+                    Developer Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ways_of_working.html">
+            
+                <a href="ways_of_working.html">
+            
+                    
+                    Ways Of Working
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Overview
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="initial_requirements.html">
+            
+                <a href="initial_requirements.html">
+            
+                    
+                    Initial Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="design_principles.html">
+            
+                <a href="design_principles.html">
+            
+                    
+                    Design Principles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="roadmap.html">
+            
+                <a href="roadmap.html">
+            
+                    
+                    Roadmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Deep Dive
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="component_descriptions.html">
+            
+                <a href="component_descriptions.html">
+            
+                    
+                    High Level Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="map_reduce_architecture.html">
+            
+                <a href="map_reduce_architecture.html">
+            
+                    
+                    Map Reduce Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="read_process.html">
+            
+                <a href="read_process.html">
+            
+                    
+                    Standard Flow of Read Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="deployment_ideas.html">
+            
+                <a href="deployment_ideas.html">
+            
+                    
+                    Deployment Ideas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="possible_clients.html">
+            
+                <a href="possible_clients.html">
+            
+                    
+                    Possible Clients
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="security_considerations.html">
+            
+                <a href="security_considerations.html">
+            
+                    
+                    Security Considerations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Standard Flow of Read Request</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="standard-flow-for-a-read-request-through-the-palisade-system">Standard flow for a read request through the Palisade system</h2>
+<p><img src="../img/sequence.png" alt="picture"></p>
+<ol>
+<li><p>The user makes use of a plug-in (client) for the data processing technology that they are using which makes it almost invisible to them that they are actually querying data via Palisade.</p>
+</li>
+<li><p>For a distributed workflow that client code will usually be made up of a driver component and an executor/mapper component. The driver component starts by registering the data request with the 
+palisade service, stating the resources/alias mapping to resources that they want to query, along with a user id and any required context such as a purpose for querying the data.</p>
+</li>
+<li><p>The palisade service receives that request then authenticates the user.</p>
+</li>
+<li><p>The palisade service then requests the full details about the user from the user service.</p>
+</li>
+<li><p>The palisade service then requests from the resource service the mapping of how to connect to the relevant data service(s) to retrieve each of the resources requested. This may allow aliases which map to a list of resources, 
+which would need to be resolved by the resource service.</p>
+</li>
+<li><p>The Palisade service requests from the policy service the details of which of the resources the user is allowed to access at a resource level.</p>
+</li>
+<li><p>The palisade service then requests from the policy service the record level rules to be applied to each of the resources, passing in the full user details returned by the user service, 
+any context passed in by the client code and the list of resources returned by the resource service.</p>
+</li>
+<li><p>The palisade service then caches the response from the policy service in the cache service, keyed by a unique token, so that any palisade service can respond to the data server later on.</p>
+</li>
+<li><p>The palisade service then returns the token along with the resource to data service connection details mapping of the resources that the user is allow to access to the client in response to the client registering the request.</p>
+</li>
+<li><p>The palisade service will log for auditing that the registration has been successful along with the details of what resources are being approved for the user to read.</p>
+</li>
+<li><p>The client code, having received the mapping of resource to data service connection details, can now split the resources up over its executors and then each executor can request each of the resources
+from the relevant data service(s).</p>
+</li>
+<li><p>The data service receives the request to read a resource.</p>
+</li>
+<li><p>The data service then passes that request to the palisade service to authenticate the request and provide the record level rules to be applied to that resource, the user attributes and the context.</p>
+</li>
+<li><p>The palisade service responds to the data service by retrieving from the cache service the required details that was previously cached.</p>
+</li>
+<li><p>The data service uses the response to read the resource and apply the rules.</p>
+</li>
+<li><p>The filtered and transformed data is then streamed back to the client.</p>
+</li>
+<li><p>The client then formats the code in the way that the data processing technology expects the data, so the user&apos;s code can proceed as if Palisade was never there.</p>
+</li>
+<li><p>On close of the data stream the data service will log the completion of the read request.</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="map_reduce_architecture.html" class="navigation navigation-prev " aria-label="Previous page: Map Reduce Architecture">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="deployment_ideas.html" class="navigation navigation-next " aria-label="Next page: Deployment Ideas">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Standard Flow of Read Request","level":"1.4.3","depth":2,"next":{"title":"Deployment Ideas","level":"1.4.4","depth":2,"path":"doc/deployment_ideas.md","ref":"doc/deployment_ideas.md","articles":[]},"previous":{"title":"Map Reduce Architecture","level":"1.4.2","depth":2,"path":"doc/map_reduce_architecture.md","ref":"doc/map_reduce_architecture.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-interactive","codetabs","prism","-highlight","github","anchorjs","otherlink"],"root":"./","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://gchq.github.io/Palisade"},"search":{"maxIndexSize":5000000},"otherlink":{},"codetabs":{},"lunr":{"maxIndexSize":5000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"expandable-chapters-interactive":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"summary.md"},"variables":{},"title":"Palisade Doc","gitbook":"3.x.x"},"file":{"path":"doc/read_process.md","mtime":"2020-04-27T15:09:34.910Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-27T15:10:00.238Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
